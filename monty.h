@@ -18,7 +18,7 @@ typedef struct stac_s
 } stack_t;
 
 /**
- * struct instructio_s - opcode and its function
+ * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
  *
@@ -30,6 +30,15 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/**
+ * struct stack_t - struct for the stack
+ *
+ */
+typedef struct stack_s
+{
+	int *element;
+} stack_t;
 
 
 #endif
