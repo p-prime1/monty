@@ -10,6 +10,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/stat.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or a queue)
@@ -49,5 +50,12 @@ size_t print_stack(const stack_t *stack);
 void free_stack(stack_t *stack);
 void _mul(stack **stack, unsigned int line_cnt);
 void _pint(stack_t **stack, unsigned int line_number);
+void _swap(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_cnt);
+void mod(stack_t **stack, unsigned  int line_cnt);
+void opcode(stack_t  **stack, char *str, unsigned int line_cnt);
+void _add(stack_t **stack, unsigned int line_cnt);
+void pall(stack_t **stack, insigned int line_cnt __attribute__((unused)));
+
 
 #endif
