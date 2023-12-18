@@ -3,6 +3,8 @@
 #include <string.h>
 #include "monty.h"
 
+glob_t global = {NULL, NULL};
+
 /**
  * opcode - Function in charge of running builtins.
  * @stack: Stack given by main.

@@ -48,14 +48,26 @@ void _div(stack_t **stack, unsigned int line_cnt);
 void _sub(stack_t **stack, unsigned int line_cnt);
 size_t print_stack(const stack_t *stack);
 void free_stack(stack_t *stack);
-void _mul(stack **stack, unsigned int line_cnt);
+void _mul(stack_t **stack, unsigned int line_cnt);
 void _pint(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_cnt);
 void mod(stack_t **stack, unsigned  int line_cnt);
 void opcode(stack_t  **stack, char *str, unsigned int line_cnt);
 void _add(stack_t **stack, unsigned int line_cnt);
-void pall(stack_t **stack, insigned int line_cnt __attribute__((unused)));
+void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
+void cleanStack(stack_t **stack);
+void _pop(stack_t **stack, unsigned int line_number);
+void _pstr(stack_t **stack, unsigned int line_number);
+typedef struct glob_s
+{
+	FILE *fd;
+	char *line;
+	int data_struct;
+} glob_t;
+
+extern glob_t global;
+extern int value;
 
 
 #endif
